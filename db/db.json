@@ -1,33 +1,22 @@
 [
    {
-      "id": "id number",
-      "title": "Test Title",
-      "text": "Test text"
+      "title": "CSS",
+      "text": "CSS styles the webpage",
+      "id": 1
    },
    {
-      "title": "something",
-      "text": "something"
+      "title": "HTML",
+      "text": "outlines how the page should look",
+      "id": 2
    },
    {
-      "title": "add",
-      "text": "notes"
+      "title": "JAVASCRIPT",
+      "text": "Makes webpage more dynamic ",
+      "id": 3
    },
    {
-      "title": "ss",
-      "text": "ss"
-   },
-   {
-      "title": "cc",
-      "text": "cc"
-   },
-   {
-      "title": "ff",
-      "text": "ff",
-      "id": "hello"
-   },
-   {
-      "title": "some",
-      "text": "notes",
-      "id": 7
+      "title": "HELLO",
+      "text": "this is a message",
+      "id": 4
    }
 ]

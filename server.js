@@ -1,4 +1,3 @@
-const e = require('express');
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
@@ -29,7 +28,6 @@ app.get('/api/notes', (req, res) => {
 
 // POST the notes 
 app.post('/api/notes', (req, res) => {
-        console.log(req.body);
         const { title, text } = req.body;
         if (title && text){
             const newNote = {
@@ -41,7 +39,7 @@ app.post('/api/notes', (req, res) => {
                 if (err) {
                     console.error(err);
                 } else {
-                    const parsedNotes = JSON.parse(data);
+                    let parsedNotes = JSON.parse(data);
                     console.log('parsedNotes', parsedNotes.length)
                     newNote.id = parsedNotes.length + 1;
                     parsedNotes.push(newNote);
@@ -55,7 +53,6 @@ app.post('/api/notes', (req, res) => {
             })
         }
 });
-
 
 app.listen(PORT, () => 
     console.log(`Note taker is ready at http://localhost:${PORT}`)
