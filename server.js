@@ -44,6 +44,20 @@ app.post('/api/notes', (req, res) => {
     })
 });
 
+// DELETE the notes
+app.delete('/api/notes/:id', (req, res) => {
+    const noteID = req.params.id;
+    console.log(noteID)
+    fs.readFile('./db/db.json', 'utf8', function(err, data) {
+        let parsedNotes = JSON.parse(data)
+        const filterNotes = parsedNotes.filter((id) => id.id != noteID);
+        fs.writeFile('./db/db.json', JSON.stringify(filterNotes, null, 3), function (err) {
+            if (err) throw err;
+            res.json(filterNotes)
+        }) 
+    })
+});
+
 app.listen(PORT, () => 
     console.log(`Note taker is ready at http://localhost:${PORT}`)
 ); 
