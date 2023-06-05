@@ -28,30 +28,20 @@ app.get('/api/notes', (req, res) => {
 
 // POST the notes 
 app.post('/api/notes', (req, res) => {
+    fs.readFile('./db/db.json', 'utf8', function(err, data) {
+        let parsedNotes = JSON.parse(data)
         const { title, text } = req.body;
-        if (title && text){
-            const newNote = {
-                title,
-                text,
-            };
-
-            fs.readFile('./db/db.json', 'utf8', (err, data) => {
-                if (err) {
-                    console.error(err);
-                } else {
-                    let parsedNotes = JSON.parse(data);
-                    console.log('parsedNotes', parsedNotes.length)
-                    newNote.id = parsedNotes.length + 1;
-                    parsedNotes.push(newNote);
-
-                    fs.writeFile('./db/db.json', JSON.stringify(parsedNotes, null, 3), (writeErr) =>
-                        writeErr
-                            ? console.error(writeErr)
-                            : console.info('success!')
-                    )
-                }
-            })
-        }
+        const newNote = {
+            title,
+            text,
+        };
+        newNote.id = parsedNotes.length + 1;
+        parsedNotes.push(newNote)
+        fs.writeFile('./db/db.json', JSON.stringify(parsedNotes, null, 3), function (err) {
+            if (err) throw err;
+            res.json(parsedNotes)
+        })
+    })
 });
 
 app.listen(PORT, () => 
