@@ -11,11 +11,13 @@ In order to get this to work properly, you will need to install Node js. v16 and
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+When you first open the webpage you are greeted with the home page of 'Note Taker', 'Take notes with Express', with a blue button saying 'Get Started'. After you click the button, your saved notes are on the left hand side, to write notes are on the center, and to add or save notes is on the right hand corner of the page. When the user finishes typing a title and their notes, then click the save button and their note will be saved. If the user decides to delete their notes, then they can click the red trash can to remove it and to add more. 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![alt text](assets/images/screenshot.png)
+![alt text](/public/assets/images/Screenshot%202023-06-05%20at%2010.15.44%20PM.png)
+![alt text](/public/assets/images/Screenshot%202023-06-05%20at%2010.15.58%20PM.png)
+![alt text](/public/assets/images/Screenshot%202023-06-05%20at%2010.16.26%20PM.png)
+![alt text](/public/assets/images/Screenshot%202023-06-05%20at%2010.17.27%20PM.png)
+![alt text](/public/assets/images/Screenshot%202023-06-05%20at%2010.18.05%20PM.png)
 
 
 ## License
@@ -41,3 +43,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Links
+Here is the link to my repo: https://github.com/Nneifem/note-taker
+
+Here is the link to my webpage: https://nneif-note-taker.herokuapp.com/
